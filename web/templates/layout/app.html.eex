@@ -19,6 +19,7 @@
             <li>
               <%= @current_user.email %>
             </li>
+            <li><%= link "Chat", to: chat_path(@conn, :index) %></li>
             <li>
               <%= link "My posts", to: user_post_path(@conn, :index, @current_user) %>
             </li>
