@@ -36,7 +36,7 @@
           <% end %>
         </ol>
       </div>
-      <span class="logo"></span>
+      <center>	<img src = "/images/logo.png" style = "width: 90%;"></center>
 
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
