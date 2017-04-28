@@ -28,8 +28,9 @@ defmodule UnfSwuber.Router do
   scope "/", UnfSwuber do
     pipe_through [:browser, :with_session]
 
-    get "/", PageController, :index
 
+    get "/", PageController, :index
+    get "/chat", ChatController, :index
     resources "/sessions", SessionController, only: [:new, :create, :delete]
 
     resources "/users", UserController, only: [:new, :create]
