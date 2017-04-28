@@ -7,7 +7,7 @@ defmodule UnfSwuber.Post do
 
     belongs_to :user, UnfSwuber.User
 
-    timestamps
+    timestamps()
   end
 
   @required_fields ~w(title)a

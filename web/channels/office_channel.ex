@@ -1,10 +1,10 @@
-defmodule UnfSwuber.RoomChannel do
+defmodule UnfSwuber.OfficeChannel do
   use Phoenix.Channel
-  def join("room:lobby", _message, socket) do
-    IO.puts "room channel and not office channel"
+  def join("office:lobby", _message, socket) do
+    IO.puts "Office channel and not room channel"
     {:ok, socket}
   end
-  def join("room:" <> _private_room_id, _params, _socket) do
+  def join("office:" <> _private_room_id, _params, _socket) do
     {:error, %{reason: "unauthorized"}}
   end
   def handle_in("new_msg", %{"body" => body}, socket) do

@@ -10,7 +10,7 @@ defmodule UnfSwuber.User do
 
     has_many :posts, UnfSwuber.Post
 
-    timestamps
+    timestamps()
   end
 
   @required_fields ~w(email)a
