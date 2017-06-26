@@ -1,5 +1,5 @@
-defmodule SimpleAuth.User do
-  use SimpleAuth.Web, :model
+defmodule UnfSwuber.User do
+  use UnfSwuber.Web, :model
 
   schema "users" do
     field :email, :string
@@ -8,7 +8,7 @@ defmodule SimpleAuth.User do
     field :password_hash, :string
     field :is_admin, :boolean, default: false
 
-    has_many :posts, SimpleAuth.Post
+    has_many :posts, UnfSwuber.Post
 
     timestamps
   end

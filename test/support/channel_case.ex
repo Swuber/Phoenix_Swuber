@@ -1,4 +1,4 @@
-defmodule SimpleAuth.ChannelCase do
+defmodule UnfSwuber.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule SimpleAuth.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias SimpleAuth.Repo
+      alias UnfSwuber.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint SimpleAuth.Endpoint
+      @endpoint UnfSwuber.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(SimpleAuth.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(UnfSwuber.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(SimpleAuth.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(UnfSwuber.Repo, {:shared, self()})
     end
 
     :ok

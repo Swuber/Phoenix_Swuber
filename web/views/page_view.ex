@@ -1,3 +1,3 @@
-defmodule SimpleAuth.PageView do
-  use SimpleAuth.Web, :view
+defmodule UnfSwuber.PageView do
+  use UnfSwuber.Web, :view
 end

@@ -1,7 +1,7 @@
-defmodule SimpleAuth.Admin.UserController do
-  use SimpleAuth.Web, :controller
+defmodule UnfSwuber.Admin.UserController do
+  use UnfSwuber.Web, :controller
 
-  alias SimpleAuth.User
+  alias UnfSwuber.User
 
   def index(conn, _params) do
     users = Repo.all(User)

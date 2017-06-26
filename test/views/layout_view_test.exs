@@ -1,3 +1,3 @@
-defmodule SimpleAuth.LayoutViewTest do
-  use SimpleAuth.ConnCase, async: true
+defmodule UnfSwuber.LayoutViewTest do
+  use UnfSwuber.ConnCase, async: true
 end

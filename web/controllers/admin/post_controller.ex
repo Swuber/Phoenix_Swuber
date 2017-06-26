@@ -1,7 +1,7 @@
-defmodule SimpleAuth.Admin.PostController do
-  use SimpleAuth.Web, :controller
+defmodule UnfSwuber.Admin.PostController do
+  use UnfSwuber.Web, :controller
 
-  alias SimpleAuth.User
+  alias UnfSwuber.User
 
   def index(conn, %{"user_id" => user_id}) do
     user = user_id |> user_by_id

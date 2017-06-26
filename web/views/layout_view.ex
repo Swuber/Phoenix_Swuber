@@ -1,3 +1,3 @@
-defmodule SimpleAuth.LayoutView do
-  use SimpleAuth.Web, :view
+defmodule UnfSwuber.LayoutView do
+  use UnfSwuber.Web, :view
 end

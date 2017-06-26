@@ -1,4 +1,4 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(SimpleAuth.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(UnfSwuber.Repo, :manual)
 

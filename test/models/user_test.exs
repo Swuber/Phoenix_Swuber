@@ -1,7 +1,7 @@
-defmodule SimpleAuth.UserTest do
-  use SimpleAuth.ModelCase
+defmodule UnfSwuber.UserTest do
+  use UnfSwuber.ModelCase
 
-  alias SimpleAuth.User
+  alias UnfSwuber.User
 
   @valid_attrs %{email: "some content", is_admin: true, name: "some content", password_hash: "some content"}
   @invalid_attrs %{}

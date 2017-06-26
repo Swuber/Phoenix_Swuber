@@ -1,5 +1,5 @@
-defmodule SimpleAuth.PageControllerTest do
-  use SimpleAuth.ConnCase
+defmodule UnfSwuber.PageControllerTest do
+  use UnfSwuber.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

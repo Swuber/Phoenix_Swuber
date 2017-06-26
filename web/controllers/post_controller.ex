@@ -1,8 +1,8 @@
-defmodule SimpleAuth.PostController do
-  use SimpleAuth.Web, :controller
+defmodule UnfSwuber.PostController do
+  use UnfSwuber.Web, :controller
 
-  alias SimpleAuth.User
-  alias SimpleAuth.Post
+  alias UnfSwuber.User
+  alias UnfSwuber.Post
 
   plug :scrub_params, "post" when action in [:create, :update]
 
@@ -65,7 +65,7 @@ defmodule SimpleAuth.PostController do
     else
       conn
       |> put_status(:not_found)
-      |> render(SimpleAuth.ErrorView, "404.html")
+      |> render(UnfSwuber.ErrorView, "404.html")
     end
   end
 

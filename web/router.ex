@@ -1,5 +1,5 @@
-defmodule SimpleAuth.Router do
-  use SimpleAuth.Web, :router
+defmodule UnfSwuber.Router do
+  use UnfSwuber.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -12,20 +12,20 @@ defmodule SimpleAuth.Router do
   pipeline :with_session do
     plug Guardian.Plug.VerifySession
     plug Guardian.Plug.LoadResource
-    plug SimpleAuth.CurrentUser
+    plug UnfSwuber.CurrentUser
   end
 
   pipeline :login_required do
     plug Guardian.Plug.EnsureAuthenticated,
-         handler: SimpleAuth.GuardianErrorHandler
+         handler: UnfSwuber.GuardianErrorHandler
   end
 
   pipeline :admin_required do
-    plug SimpleAuth.CheckAdmin
+    plug UnfSwuber.CheckAdmin
   end
 
   # guest zone
-  scope "/", SimpleAuth do
+  scope "/", UnfSwuber do
     pipe_through [:browser, :with_session]
 
     get "/", PageController, :index

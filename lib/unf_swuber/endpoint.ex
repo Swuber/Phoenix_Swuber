@@ -1,14 +1,14 @@
-defmodule SimpleAuth.Endpoint do
-  use Phoenix.Endpoint, otp_app: :simple_auth
+defmodule UnfSwuber.Endpoint do
+  use Phoenix.Endpoint, otp_app: :unf_swuber
 
-  socket "/socket", SimpleAuth.UserSocket
+  socket "/socket", UnfSwuber.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :simple_auth, gzip: false,
+    at: "/", from: :unf_swuber, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,8 +35,8 @@ defmodule SimpleAuth.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_simple_auth_key",
+    key: "_unf_swuber_key",
     signing_salt: "1BkxIiHa"
 
-  plug SimpleAuth.Router
+  plug UnfSwuber.Router
 end

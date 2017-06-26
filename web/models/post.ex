@@ -1,11 +1,11 @@
-defmodule SimpleAuth.Post do
-  use SimpleAuth.Web, :model
+defmodule UnfSwuber.Post do
+  use UnfSwuber.Web, :model
 
   schema "posts" do
     field :title, :string
     field :body, :string
 
-    belongs_to :user, SimpleAuth.User
+    belongs_to :user, UnfSwuber.User
 
     timestamps
   end
