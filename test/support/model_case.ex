@@ -1,4 +1,4 @@
-defmodule SimpleAuth.ModelCase do
+defmodule UnfSwuber.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -16,20 +16,20 @@ defmodule SimpleAuth.ModelCase do
 
   using do
     quote do
-      alias SimpleAuth.Repo
+      alias UnfSwuber.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import SimpleAuth.ModelCase
+      import UnfSwuber.ModelCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(SimpleAuth.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(UnfSwuber.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(SimpleAuth.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(UnfSwuber.Repo, {:shared, self()})
     end
 
     :ok
@@ -59,7 +59,7 @@ defmodule SimpleAuth.ModelCase do
   """
   def errors_on(struct, data) do
     struct.__struct__.changeset(struct, data)
-    |> Ecto.Changeset.traverse_errors(&SimpleAuth.ErrorHelpers.translate_error/1)
+    |> Ecto.Changeset.traverse_errors(&UnfSwuber.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end

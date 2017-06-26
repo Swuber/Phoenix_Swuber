@@ -1,5 +1,5 @@
-alias SimpleAuth.Repo
-alias SimpleAuth.User
+alias UnfSwuber.Repo
+alias UnfSwuber.User
 
 admin_params = %{name: "Admin User",
                  email: "admin@test.com",

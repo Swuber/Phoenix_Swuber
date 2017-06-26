@@ -1,4 +1,4 @@
-defmodule SimpleAuth.CheckAdmin do
+defmodule UnfSwuber.CheckAdmin do
   import Phoenix.Controller
   import Plug.Conn
 
@@ -12,7 +12,7 @@ defmodule SimpleAuth.CheckAdmin do
     else
       conn
       |> put_status(:not_found)
-      |> render(SimpleAuth.ErrorView, "404.html")
+      |> render(UnfSwuber.ErrorView, "404.html")
       |> halt
     end
   end

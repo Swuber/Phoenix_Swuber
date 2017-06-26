@@ -1,8 +1,8 @@
-defmodule SimpleAuth.GuardianSerializer do
+defmodule UnfSwuber.GuardianSerializer do
   @behaviour Guardian.Serializer
 
-  alias SimpleAuth.Repo
-  alias SimpleAuth.User
+  alias UnfSwuber.Repo
+  alias UnfSwuber.User
 
   def for_token(user = %User{}), do: { :ok, "User:#{user.id}" }
   def for_token(_), do: { :error, "Unknown resource type" }

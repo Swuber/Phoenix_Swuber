@@ -1,7 +1,7 @@
-defmodule SimpleAuth.PostTest do
-  use SimpleAuth.ModelCase
+defmodule UnfSwuber.PostTest do
+  use UnfSwuber.ModelCase
 
-  alias SimpleAuth.Post
+  alias UnfSwuber.Post
 
   @valid_attrs %{body: "some content", title: "some content"}
   @invalid_attrs %{}

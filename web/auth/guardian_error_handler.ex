@@ -1,5 +1,5 @@
-defmodule SimpleAuth.GuardianErrorHandler do
-  import SimpleAuth.Router.Helpers
+defmodule UnfSwuber.GuardianErrorHandler do
+  import UnfSwuber.Router.Helpers
 
   def unauthenticated(conn, _params) do
     conn

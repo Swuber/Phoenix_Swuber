@@ -1,12 +1,12 @@
-defmodule SimpleAuth.Web do
+defmodule UnfSwuber.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use SimpleAuth.Web, :controller
-      use SimpleAuth.Web, :view
+      use UnfSwuber.Web, :controller
+      use UnfSwuber.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule SimpleAuth.Web do
     quote do
       use Phoenix.Controller
 
-      alias SimpleAuth.Repo
+      alias UnfSwuber.Repo
       import Ecto
       import Ecto.Query
 
-      import SimpleAuth.Router.Helpers
-      import SimpleAuth.Gettext
+      import UnfSwuber.Router.Helpers
+      import UnfSwuber.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule SimpleAuth.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import SimpleAuth.Router.Helpers
-      import SimpleAuth.ErrorHelpers
-      import SimpleAuth.Gettext
+      import UnfSwuber.Router.Helpers
+      import UnfSwuber.ErrorHelpers
+      import UnfSwuber.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule SimpleAuth.Web do
     quote do
       use Phoenix.Channel
 
-      alias SimpleAuth.Repo
+      alias UnfSwuber.Repo
       import Ecto
       import Ecto.Query
-      import SimpleAuth.Gettext
+      import UnfSwuber.Gettext
     end
   end
 

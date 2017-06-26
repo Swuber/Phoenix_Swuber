@@ -1,8 +1,8 @@
-defmodule SimpleAuth.Auth do
+defmodule UnfSwuber.Auth do
   import Comeonin.Bcrypt, only: [checkpw: 2, dummy_checkpw: 0]
 
-  alias SimpleAuth.User
-  alias SimpleAuth.Repo
+  alias UnfSwuber.User
+  alias UnfSwuber.Repo
 
   def login(conn, user) do
     conn

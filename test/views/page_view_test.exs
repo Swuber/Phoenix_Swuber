@@ -1,3 +1,3 @@
-defmodule SimpleAuth.PageViewTest do
-  use SimpleAuth.ConnCase, async: true
+defmodule UnfSwuber.PageViewTest do
+  use UnfSwuber.ConnCase, async: true
 end

@@ -1,5 +1,5 @@
-defmodule SimpleAuth.ErrorView do
-  use SimpleAuth.Web, :view
+defmodule UnfSwuber.ErrorView do
+  use UnfSwuber.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

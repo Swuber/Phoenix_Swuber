@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :simple_auth,
-  ecto_repos: [SimpleAuth.Repo]
+config :unf_swuber,
+  ecto_repos: [UnfSwuber.Repo]
 
 # Configures the endpoint
-config :simple_auth, SimpleAuth.Endpoint,
+config :unf_swuber, UnfSwuber.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "9SbizyjDVcuiFzQSjHLCCpMWvqTe97pVuxDN/QmssGYRVVh7p2UmSKoG3HpygHI9",
-  render_errors: [view: SimpleAuth.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: SimpleAuth.PubSub,
+  render_errors: [view: UnfSwuber.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: UnfSwuber.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
@@ -23,10 +23,10 @@ config :logger, :console,
   metadata: [:request_id]
 
 config :guardian, Guardian,
-  issuer: "SimpleAuth.#{Mix.env}",
+  issuer: "UnfSwuber.#{Mix.env}",
   ttl: {30, :days},
   verify_issuer: true,
-  serializer: SimpleAuth.GuardianSerializer,
+  serializer: UnfSwuber.GuardianSerializer,
   secret_key: to_string(Mix.env) <> "SuPerseCret_aBraCadabrA"
 
 # Import environment specific config. This must remain at the bottom

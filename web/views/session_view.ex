@@ -1,3 +1,3 @@
-defmodule SimpleAuth.SessionView do
-  use SimpleAuth.Web, :view
+defmodule UnfSwuber.SessionView do
+  use UnfSwuber.Web, :view
 end

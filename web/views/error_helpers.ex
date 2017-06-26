@@ -1,4 +1,4 @@
-defmodule SimpleAuth.ErrorHelpers do
+defmodule UnfSwuber.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule SimpleAuth.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(SimpleAuth.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(UnfSwuber.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(SimpleAuth.Gettext, "errors", msg, opts)
+      Gettext.dgettext(UnfSwuber.Gettext, "errors", msg, opts)
     end
   end
 end

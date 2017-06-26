@@ -1,5 +1,5 @@
-defmodule SimpleAuth.SessionController do
-  use SimpleAuth.Web, :controller
+defmodule UnfSwuber.SessionController do
+  use UnfSwuber.Web, :controller
 
   plug :scrub_params, "session" when action in ~w(create)a
 
@@ -8,7 +8,7 @@ defmodule SimpleAuth.SessionController do
   end
 
   def create(conn, %{"session" => %{"email" => email, "password" => password}}) do
-    case SimpleAuth.Auth.login_by_email_and_pass(conn, email, password) do
+    case UnfSwuber.Auth.login_by_email_and_pass(conn, email, password) do
       {:ok, conn} ->
         conn
         |> put_flash(:info, "You're now signed in!")
@@ -22,7 +22,7 @@ defmodule SimpleAuth.SessionController do
 
   def delete(conn, _) do
     conn
-    |> SimpleAuth.Auth.logout
+    |> UnfSwuber.Auth.logout
     |> put_flash(:info, "See you later!")
     |> redirect(to: page_path(conn, :index))
   end

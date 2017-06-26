@@ -1,3 +1,3 @@
-defmodule SimpleAuth.Admin.UserView do
-  use SimpleAuth.Web, :view
+defmodule UnfSwuber.Admin.UserView do
+  use UnfSwuber.Web, :view
 end

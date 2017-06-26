@@ -1,7 +1,7 @@
-defmodule SimpleAuth.UserController do
-  use SimpleAuth.Web, :controller
+defmodule UnfSwuber.UserController do
+  use UnfSwuber.Web, :controller
 
-  alias SimpleAuth.User
+  alias UnfSwuber.User
 
   def show(conn, %{"id" => id}) do
       user = Repo.get!(User, id)
@@ -21,7 +21,7 @@ defmodule SimpleAuth.UserController do
     case Repo.insert(changeset) do
       {:ok, user} ->
         conn
-        |> SimpleAuth.Auth.login(user)
+        |> UnfSwuber.Auth.login(user)
         |> put_flash(:info, "#{user.name} created!")
         |> redirect(to: user_path(conn, :show, user))
       {:error, changeset} ->

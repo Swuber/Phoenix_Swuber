@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :simple_auth, SimpleAuth.Endpoint,
+config :unf_swuber, UnfSwuber.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -16,7 +16,7 @@ config :simple_auth, SimpleAuth.Endpoint,
 
 
 # Watch static and templates for browser reloading.
-config :simple_auth, SimpleAuth.Endpoint,
+config :unf_swuber, UnfSwuber.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
@@ -34,10 +34,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :simple_auth, SimpleAuth.Repo,
+config :unf_swuber, UnfSwuber.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "simple_auth_dev",
+  database: "unf_swuber_dev",
   hostname: "localhost",
   pool_size: 10
