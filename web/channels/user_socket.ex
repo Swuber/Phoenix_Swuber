@@ -21,6 +21,7 @@ defmodule UnfSwuber.UserSocket do
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
   def connect(_params, socket) do
+    IO.inspect socket, label: "\n socket information when connecting to socket!!!:\n"
     {:ok, socket}
   end
 
