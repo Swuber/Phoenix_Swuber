@@ -1,15 +1,14 @@
 ![swuber_3](https://cloud.githubusercontent.com/assets/11463275/25136927/4fd60eea-2424-11e7-989d-d6630c5b0827.png)
 
-## Why Swuber?
-It started in parking lot 14; on the way to class I asked a friend if they could give me a ride. the friend was not leaving but also going to class. As a result we walked together and not alone. Later when leaving the library I was forced to walk alone by lack of communication and lack of traffic at that hour.  
 
-I did not want to walk to my car. I waited outside the library for someone I knew. Eventually I gave up but the idea was born. Generosity(reputation) and the capital of my parking spot could be used to get me to my car without having to walk alone. 
+# make sure to check out the notes at 
+[channels_readme](web/channels/Readme.md)
+<br>[web_static_readme](web/static/Readme.md)
+<br>[web_templates_readme](web/templates/Readme.md)
+<br>[web/controllers/readme](web/controllers/Readme.md)
+<br>[router_readme](web/router/Readme.md)
+<br>[web/views/](web/views/Readme.md)
 
-For years people have tried to solve the problem of finding a parking spot at the University of North Florida.
-#### *We solved "the parking problem" in order to solve a "walking problem"*
-<hr>
-
-# Implementation
 
 On a mac: 
 make sure postgress is installed via homebrew.
@@ -21,7 +20,9 @@ now restart your computer, reason: postgres uses a launchd. (only needed for fir
 
   * Gather dependencies
 <pre>
- mix deps.get
+cd Phoenix_Swuber
+git checkout jax-ex-channels-prog-talk
+mix deps.get
  npm install 
 </pre>
   * Create and migrate your database with 
