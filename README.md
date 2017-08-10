@@ -19,7 +19,7 @@ web/channels/room_socket
 web/templates/chat/index.html.eex
 </pre>
 
-### checkpoint 2 confifured to deploy to heroku.
+### checkpoint 2 configured to deploy to heroku.
 <pre>
 Procfile
 config/prod.exs
