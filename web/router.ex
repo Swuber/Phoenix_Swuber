@@ -17,7 +17,7 @@ defmodule UnfSwuber.Router do
 
   pipeline :login_required do
     plug Guardian.Plug.EnsureAuthenticated,
-         handler: UnfSwuber.GuardianErrorHandler
+    handler: UnfSwuber.GuardianErrorHandler
   end
 
   pipeline :admin_required do
@@ -27,30 +27,25 @@ defmodule UnfSwuber.Router do
   # guest zone
   scope "/", UnfSwuber do
     pipe_through [:browser, :with_session]
-
-
     get "/", PageController, :index
     get "/chat", ChatController, :index
     resources "/sessions", SessionController, only: [:new, :create, :delete]
-
     resources "/users", UserController, only: [:new, :create]
 
-    # registered user zone
-    scope "/" do
-      pipe_through [:login_required]
+      # registered user zone
+      scope "/" do
+        pipe_through [:login_required]
+          resources "/users", UserController, only: [:show] do
+          resources "/posts", PostController
+        end
 
-      resources "/users", UserController, only: [:show] do
-        resources "/posts", PostController
-      end
-
-      # admin zone
-      scope "/admin", Admin, as: :admin do
-        pipe_through [:admin_required]
-
-        resources "/users", UserController, only: [:index, :show] do
-          resources "/posts", PostController, only: [:index, :show]
+        # admin zone
+        scope "/admin", Admin, as: :admin do
+          pipe_through [:admin_required]
+          resources "/users", UserController, only: [:index, :show] do
+            resources "/posts", PostController, only: [:index, :show]
+          end
         end
       end
-    end
   end
 end
