@@ -1,25 +1,21 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
 </div>
-
+<br><br>
+<center>
+<input id="message-input" class="form-control" style="width:70%; justify-content:center;"/>
+</center>
 
 <div id="messages" class="container" style="color:green">
 </div>
-<div id="footer"style="height:60%"> 
+<div id="footer"style="height:60%">
   <div class="container">
 	<br>
     <div class="row">
       <div class="col-sm-2">
         <div class="input-group">
         </div><!-- /input-group -->
-      </div><!-- /.col-lg-6 -->
+      </div>
       <div class="col-sm-10">
-        <!--<input id="message-input" class="form-control"/>-->
-      </div><!-- /.col-lg-6 -->
+      </div>
     </div><!-- /.row -->
   </div>
 </div>
-<center>
-<input id="message-input" class="form-control" style="width:70%; justify-content:center;"/>
-</center>
